@@ -1,69 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tanisha Tasnin's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
     <nav id="desktop-nav">
-        <div class ="logo">Tanisha Tasnin</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+      <div class="logo">Tanisha Tasnin</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </nav>
     <nav id="hamburger-nav">
-        <div class ="logo">Tanisha Tasnin</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+      <div class="logo">Tanisha Tasnin</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
         <div class="menu-links">
-            <li><a href="#about" onclick="toggleMenu()">About</a></li>
-            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-
-
-
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#myexperience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
-        </div>
+      </div>
     </nav>
     <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/mypicture.png" alt="Tanisha Tasnin">
+      <div class="section__pic-container">
+        <img src="./assets/mypicture.png" alt="Tanisha Tasnin" />
+      </div>
+      <div class="section__text">
+        <h1 class="title">Tanisha Tasnin</h1>
+        <p class="section__text__p2">
+          Software & Biomedical Engineering Student at McMaster University
+        </p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume____.pdf')"
+          >
+            Resume
+          </button>
+          <button class="btn btn-color-2" onclick="location.href='./#contact'">
+            Contact
+          </button>
         </div>
-        <div class="section__text">
-            <p class = "section__text__p1">Hi there! I am</p>
-            <h1 class="title">Tanisha Tasnin</h1>
-            <p class="section__text__p2">Software & Biomedical Engineering Student at McMaster University</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/resume____.pdf')">
-                Resume 
-                </button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                Contact
-                </button>
-            </div>
-            <div id="socials-container">
-                <img src="./assets/linkedln.png" alt="linkedln profile" 
-                class="icon" onclick="location.href='https://www.linkedin.com/in/tanishatasnin/'"
-                >
-                <img src="./assets/github-logo.png" alt="github profile" 
-                class="icon" onclick="location.href='https://github.com/tasnint'"
-                >
-            </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedln.png"
+            alt="linkedln profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/tanishatasnin/'"
+          />
+          <img
+            src="./assets/github-logo.png"
+            alt="github profile"
+            class="icon"
+            onclick="location.href='https://github.com/tasnint'"
+          />
         </div>
+      </div>
     </section>
-    <script src="script.js"></script>   
-</body>
+
+    <div id="about">
+      <div class="about-container">
+        <div class="row">
+          <div class="about-col-1">
+            <div class="slideshow-container">
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="./assets/aboutme.png" alt="" style="width: 100%" />
+                <div class="text">
+                  One of my favourite pictures from my visit to India this
+                  summer!
+                </div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="./assets/aboutme3.png" alt="" style="width: 100%" />
+                <div class="text">
+                  A satisfying moment in my lab: the successful transformation
+                  of EcoR1 bacteria indicated by pink colonies
+                </div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img
+                  src="./assets/lastaboutme.png"
+                  alt=""
+                  style="width: 100%"
+                />
+                <div class="text1">
+                  My first big project: "The Stovetop Defendoor"
+                </div>
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br />
+
+            <div style="text-align: center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+          </div>
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p class="about-me-text">
+            Hello! My name is Tanisha Tasnin, and I'm pursuing a world of
+            endless posibilities in the field of Biomedical and Software
+            Engineering as an undergraduate student. With a profound passion for
+            harnessing the power of technology to transform everyday life and
+            particularly the health care sector, I have developed an expertise
+            across laboratory experience in Cell Biology and Genetic Engineering
+            to comprehensive Software Development inclusive of both front-end
+            and back-end. I invite you to delve into my projects and
+            experiences, where you can discover the breadth of my academic and
+            professional journey.
+          </p>
+          <div class="tab-titles">
+            <h2
+              class="tab-links active-link"
+              onclick="opentab('skills', event)"
+            >
+              Skills
+            </h2>
+            <h2 class="tab-links" onclick="opentab('experience', event)">
+              Experience
+            </h2>
+            <h2 class="tab-links" onclick="opentab('education', event)">
+              Education
+            </h2>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li>
+                <span><h3>Programming Languages</h3></span>Python; CSS; HTML;
+                JavaScript; JAVA; C; React; React Native; Node.js; Verilog
+              </li>
+              <br />
+              <li>
+                <span><h3>Developer Tools</h3></span>Firebase; Figma; Canva;
+                Autodesk Inventor; MATLAB Simulink;
+              </li>
+              <br />
+              <li>
+                <span><h3>Laboratory Techniques & Experience</h3></span>Gel
+                Electrophoresis; PCR; Plasmid Miniprep & DNA Purification;
+                Molecular Cloning: Ligation & Transformation; Screening for
+                Transformants by plating samples on Antibiotic containing Agar
+                Plates; SDS-PAGE (Polyacrylamide Gel Electrophoresis);
+                Spectrophotometry & Absorbance Measurements; Protein Extraction
+                & Quantification;
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li>
+                <span
+                  ><h3>
+                    2023 October - present: Battery Workforce Challenge
+                  </h3></span
+                >
+                Algorithms Sub Team
+              </li>
+              <br />
+              <li>
+                <span
+                  ><h3>September 2022 - April 2023: McMaster ECOCAR</h3></span
+                >Connected and Automated Vehicles (CAVs) Team
+              </li>
+              <br />
+              <li>
+                <span><h3>2021 – 2022: Awareness 360</h3></span>Staff Member
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li>
+                <span><h3>McMaster University</h3></span> Bachelor of
+                Engineering in Software & Biomedical Engineering
+              </li>
+              <br />
+              <li>
+                <span><h3>Relevant Coursework</h3></span> Data Structure &
+                Algorithms; Computer Architecture; C and Bash Scripting, UNIX;
+                Genetic Engineering; Digital Systems & Interfacing
+              </li>
+              <br />
+              <li>
+                <span><h3>Academic Awards & Achievements</h3></span>McMaster
+                University Award of Excellence, Fall 2022; Deans' Honor List:
+                Winter 2023;
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="projects">
+      <div class="container">
+        <h1 class="sub-title2">My Projects</h1>
+        <div class="projects-list">
+          <div>
+            <img src="./assets/health.png" class ="project-image2"/>
+            <h2>
+              MyHealth Application
+              <p class="time">In progress</p>
+            </h2>
+            <p>
+              A cross-platform menstrual and sexual health tracking application.
+              The application comes with features such as menstrual cycle
+              logging, estimation of menstrual cycle phases as well as a
+              compilation of resources on menstrual and sexual health.
+            </p>
+            <a class="learn-more" href="https://github.com/tasnint/health">learn more</a>
+          </div>
+
+          <div>
+            <img src="./assets/lock.png" class ="project-image"/>
+            <h2>
+              Password Resilience Analyzer
+              <p class="time">December 2023</p>
+            </h2>
+            <p>
+              A C program equipped with a user-friendly interface designed to
+              evaluate the strength of a user's password by examining specific
+              criteria, including the presence of uppercase letters, special
+              characters, digits, and the overall length of the password.
+            </p>
+            <a class="learn-more" href=https://github.com/tasnint/Password-Resilience-Analyzer>
+                learn more
+            </a>
+          </div>
+
+          <div>
+            <img src="./assets/mazerunner.png" class ="project-image"/>
+            <h2>
+              Maze Runner
+              <p class="time">January - February 2024</p>
+            </h2>
+            <p>
+              
+                A program designed to calculate a route from the entrance to the exit within a maze, 
+                utilizing diverse algorithms to determine the pathway and subsequently displaying the calculated route.
+            </p>
+            <a class="learn-more" href=https://github.com/tasnint/Password-Resilience-Analyzer>
+                learn more
+            </a>
+          </div>
+
+          <div>
+            <img src="./assets/stove.png" class ="project-image3"/>
+            <h2>
+              Stovetop Defendoor
+              <p class="time">January - February 2023</p>
+            </h2>
+            <p>
+              A proactive design aimed at reducing burn injuries in children due to stovetop incidents  
+              By incorporating force-sensitive sensors, which are programmed in Python and interfaced through a Raspberry Pi, 
+              this system activates a barrier alongside an alarm whenever it detects the presence of children 
+              within the vicinity of the stovetop.
+            </p>
+            <a class="learn-more" href=https://www.notion.so/Tanisha-Tasnin-4a2c2c6b407b4775aa205a99eb4856b5?pvs=4#b8523136ac5c4eeb81a13a5966c474c9>
+                learn more
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="myexperience">
+      <div class="container">
+        <h1 class="sub-title2">My Experience</h1>
+        <div class="myexperience-list">
+          <div class="myexperience">
+            <header class="myexperience-text">Laboratory Experience</header>
+            <p class="myexperience-text2">Constructing a Copper Biosensor using Genetic Engineering</p>
+              <p class = "myexperience-text1">
+                The lab aimed to engineer E. coli for copper ion detection by inserting the copper-sensitive pCusC 
+                promoter into an asPink-promoterless plasmid, enabling asPink protein expression in response to copper levels. 
+                PCR amplified the pCusC promoter, followed by plasmid miniprep, gel electrophoresis, molecular cloning via 
+                restriction digestion and purification, and ligation, culminating in E. coli transformation. Screening on antibiotic 
+                and copper-containing agar, and validation through restriction enzyme fragment patterns and gel electrophoresis, 
+                assessed cloning success. Spectrophotometry and SDS-PAGE analyzed asPink protein levels, verifying the biosensor's 
+                functionality by correlating copper concentration with protein expression.</p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+  </body>
 </html>
